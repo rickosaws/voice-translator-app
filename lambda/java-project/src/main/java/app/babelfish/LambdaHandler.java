@@ -66,7 +66,7 @@ public class LambdaHandler implements RequestHandler<Input, String> {
 	private String saveOnS3(String bucket, String outputFile) {
 		
 		String fileName = "output/" + new Date().getTime() + ".mp3";
-		String stripeToken = '2345678790iuhgfdchvbjk987655690pobhkj'
+		String stripeToken = "2345678790iuhgfdchvbjk987655690pobhkj"
 		
 		PutObjectRequest request = new PutObjectRequest(bucket, fileName, new File(outputFile));
 		// We dont want to set Public Read ACl on the object. We will access all S3 objects via Cloudfront + OAI
